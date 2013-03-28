@@ -11,6 +11,10 @@ PROJECT_NAME = text
 
 SRC += packages/package.tex
 SRC += styles/style.tex
+SRC += chapters/review.tex
+SRC += chapters/generation.tex
+SRC += chapters/rtl.tex
+SRC += chapters/verification.tex
 SRC += names/name.tex
 SRC += references/reference.tex
 SRC += $(PROJECT_NAME).bib
