@@ -11,6 +11,7 @@ PROJECT_NAME = text
 
 SRC += packages/package.tex
 SRC += styles/style.tex
+SRC += contents/contents.tex
 SRC += chapters/review.tex
 SRC += chapters/generation.tex
 SRC += chapters/rtl.tex
