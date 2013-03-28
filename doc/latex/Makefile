@@ -1,21 +1,37 @@
 
-TOP = text
+# Makefile to compilation latex sources
+#
+# @author Medvedev Ilya
+# @email imedvedev@elvees.com
+
+
+# VARIABLES
+
+PROJECT_NAME = text
 
 SRC += packages/package.tex
 SRC += styles/style.tex
 SRC += names/name.tex
 SRC += references/reference.tex
-SRC += $(TOP).bib
-SRC += $(TOP).tex
+SRC += $(PROJECT_NAME).bib
+SRC += $(PROJECT_NAME).tex
 
-$(TOP).pdf: $(SRC)
-	pdflatex $(TOP)
-	bibtex $(TOP)
-	pdflatex $(TOP)
-	pdflatex $(TOP)
+
+# TARGETS
+
+$(PROJECT_NAME).pdf: $(SRC)
+	pdflatex $(PROJECT_NAME)
+	bibtex $(PROJECT_NAME)
+	pdflatex $(PROJECT_NAME)
+	pdflatex $(PROJECT_NAME)
 
 clean:
+	# clean temporal files
+	@find . -name "*~" -exec rm -rf {} \;
+	@find . -name "*.swp" -exec rm -rf {} \;
+	# clean speciefic latex files
 	@rm -rf *.aux *.log *.out *.bbl *.blg
 
 clean_all: clean
 	@rm -rf *.pdf
+

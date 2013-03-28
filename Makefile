@@ -1,5 +1,5 @@
 
-# Makefile to work with web server
+# Makefile to work phd repository
 #
 # @author Medvedev Ilya
 # @email imedvedev@elvees.com
@@ -10,6 +10,5 @@
 clean:
 	# clean temporal files
 	@find . -name "*~" -exec rm -rf {} \;
-	# clean web server speciefic files
-	@find . -name "*.pyc" -exec rm -rf {} \;
+	@find . -name "*.swp" -exec rm -rf {} \;
 
