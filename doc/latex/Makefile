@@ -35,7 +35,7 @@ clean:
 	@find . -name "*~" -exec rm -rf {} \;
 	@find . -name "*.swp" -exec rm -rf {} \;
 	# clean speciefic latex files
-	@rm -rf *.aux *.log *.out *.bbl *.blg
+	@rm -rf *.aux *.log *.out *.bbl *.blg *.toc
 
 clean_all: clean
 	@rm -rf *.pdf
